@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}{% endblock %}}</title>
+	<link rel="stylesheet" href="{% static'./css/style.css' %"}>
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="desktop-menu">
+				<a href="{%url 'homePage' %}">Main</a>
+				<a href="{%url 'aboutPage' %}">Main</a>
+				<a href="#">Contact</a>
+			</div>
+			<a href="#">Menu</a>
+			<div id="mobile-menu">
+				<a href="{%url 'homePage' %}">Main</a>
+				<a href="{%url 'aboutPage' %}">Main</a>
+				<a href="#">Contact</a>
+			</div>
+		</div>
+	</header>
+
+
+    {% block content %}
+    {% endblock %}
+<script src="{% static './js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}  {% endblock %}
+
+{% block content %}
+<main class="main">
+		<div class="container">
+		<h2 class="title">Last News</h2>
+			<div class="card">
+				<div class="card-body">
+					<h3>{{ post.title }}</h3>
+					<h4>{{ post.postDate }}</h4>
+					<p>{{ post.content|trunvatewords:12 }}</p>
+			<a href="#" class="primary-button">Read</a>
+				</div>
+			</div>
+
+		</div>
+		<div class="container">
+		<h2 class="title">{{ post.title }}</h2>
+			<h4>{{ post.postDate }}</h4>
+			<p>{{% post.content %}}</p>
+
+		</div>
+	</main>
+{% endblock %}

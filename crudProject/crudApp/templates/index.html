@@ -1,0 +1,34 @@
+
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+<main class="main">
+		<div id="main-contet" class="container mb-10">
+			<h1 class="title">Welcome to my wev app</h1>
+			<p class="text">USA TODAY delivers current national and local news, sports, entertainment, finance ... USA TODAY's Women of the Year project honors women making a difference. 10 best Amazon deals you can shop for today Nike sneakers, hoodies and more</p>
+			<a href="#" class="primary-button">Read</a>
+
+		</div>
+		<div class="container">
+			<h1 class="title">Last news</h1>
+			{% for post in post %}
+			<div class="card">
+				<div class="card-body">
+					<h3>{{ post.title }}</h3>
+					<h4>{{ post.postDate }}</h4>
+					<p>{{% post.content %}}</p>
+					<a href="#" class="primary-button">Read</a>
+		<a href=""{% url 'postDeatail' pk=post.pk  %}" class="primary-button">Read</a>
+				</div>
+
+			</div>
+			{% endblock %}
+		</div>
+	</main>
+{% endblock %}</title>
+</head>
+<body>
+
+</body>
+</html>
